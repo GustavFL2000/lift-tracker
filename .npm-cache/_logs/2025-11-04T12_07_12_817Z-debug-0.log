@@ -1,0 +1,19 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.2
+2 info using node@v22.14.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/gustavfaermann/lift-tarcker/.npmrc
+5 silly config load:file:/Users/gustavfaermann/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm run build
+8 verbose argv "run" "--loglevel" "silent" "build"
+9 verbose logfile logs-max:10 dir:/Users/gustavfaermann/lift-tarcker/.npm-cache/_logs/2025-11-04T12_07_12_817Z-
+10 verbose logfile /Users/gustavfaermann/lift-tarcker/.npm-cache/_logs/2025-11-04T12_07_12_817Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 verbose cwd /Users/gustavfaermann/lift-tarcker
+14 verbose os Darwin 25.0.0
+15 verbose node v22.14.0
+16 verbose npm  v10.9.2
+17 verbose exit 1
+18 verbose code 1
