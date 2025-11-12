@@ -1,26 +1,111 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ---------- Base styles ---------- */
+html, body {
+    min-height: 100%;
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111827;
+    background: linear-gradient(135deg, #0a84ff 0%, #0878e9 50%, #0560c9 100%);
+    margin: 0;
+    padding: 0;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  
+  /* ---------- Layout ---------- */
+  .card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid #e4e4e7;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: all 0.2s ease;
+  }
+  .card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transform: scale(1.01);
+  }
+  
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-primary {
+    background: black;
+    color: white;
+    padding: 8px 16px;
+  }
+  .btn-primary:hover {
+    background: #333;
+  }
+  
+  .btn-outline {
+    border: 1px solid #d4d4d8;
+    color: #3f3f46;
+    padding: 6px 12px;
+  }
+  .btn-outline:hover {
+    background: #f4f4f5;
+  }
+  
+  .btn-danger {
+    border: 1px solid #fca5a5;
+    color: #dc2626;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+  .btn-danger:hover {
+    background: #fee2e2;
+  }
+  
+  /* ---------- Inputs ---------- */
+  .input {
+    width: 100%;
+    border: 1px solid #d4d4d8;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+  }
+  .input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59,130,246,0.2);
+  }
+  
+  /* ---------- Toast ---------- */
+  .toast {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    animation: fadeIn 0.3s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px) translateX(-50%); }
+    to { opacity: 1; transform: translateY(0) translateX(-50%); }
+  }
+  
+  /* ---------- Scrollbar ---------- */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #2563eb;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #f1f5f9;
+  }
+  

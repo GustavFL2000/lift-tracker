@@ -10,6 +10,12 @@
 !.yarn/releases
 !.yarn/versions
 
+# Node modules & cache
+node_modules/
+.npm/
+.npm-cache/
+
+
 # testing
 /coverage
 
